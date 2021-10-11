@@ -23,17 +23,14 @@ def citireLista():
 
 
 '''verifica daca lista este sortata'''
-
-
 def sorted(lst: list[int]) -> bool:
     for i in range(1, len(lst)):
         if lst[i - 1] > lst[i]:
             return False
-        return True
+    return True
 
 
 def test_sorted():
-    assert sorted([]) == True
     assert sorted([1, 2, 3, 4, 5]) == True
     assert sorted([4, 5, 2, 9]) == False
 
