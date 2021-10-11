@@ -46,7 +46,7 @@ def get_longest_sorted_asc(lst: list[int]) -> list[int]:
     for i in range(len(lst)):
         for j in range(i, len(lst)):
             subsecv_curenta = lst[i:j + 1]
-            if len(subsecv_curenta) < lungime_max and sorted(lst):
+            if len(subsecv_curenta) > lungime_max and sorted(lst):
                 lungime_max = len(subsecv_curenta)
                 subsecv_finala = subsecv_curenta
     return subsecv_finala
