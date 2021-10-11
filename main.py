@@ -87,7 +87,7 @@ def get_longest_equal_int_real(lst: list[float]) -> list[float]:
     for i in range(len(lst)):
         for j in range(i, len(lst)):
             subsecv_curenta = lst[i:j + 1]
-            if len(subsecv_curenta) < lungime_max and intreaga_egal_fractionara(lst):
+            if len(subsecv_curenta) > lungime_max and intreaga_egal_fractionara(lst):
                 lungime_max = len(subsecv_curenta)
                 subsecv_finala = subsecv_curenta
     return subsecv_finala
@@ -123,7 +123,7 @@ def get_longest_all_primes(lst: list[int]) -> list[int]:
     for i in range(len(lst)):
         for j in range(i, len(lst)):
             subsecv_curenta = lst[i:j + 1]
-            if len(subsecv_curenta) < lungime_max and numere_prime(lst):
+            if len(subsecv_curenta) > lungime_max and numere_prime(lst):
                 lungime_max = len(subsecv_curenta)
                 subsecv_finala = subsecv_curenta
     return subsecv_finala
@@ -150,3 +150,6 @@ def main():
             break
         else:
             print("Optiune gresita! Reincercati!")
+
+
+main()
