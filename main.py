@@ -93,6 +93,8 @@ def get_longest_equal_int_real(lst: list[float]) -> list[float]:
                 lungime_max = len(subsecv_curenta)
                 subsecv_finala = str(subsecv_curenta)
 
+    return subsecv_finala
+
 
 def test_get_longest_equal_int_real():
     assert get_longest_equal_int_real([52.52, 41.41, 21.21, 14.2, 54.54, 13.3]) == [52.52, 41.41, 21.21]
