@@ -54,7 +54,7 @@ def get_longest_sorted_asc(lst: list[int]) -> list[int]:
 '''verifica daca partea intreaga a unui numar este egala cu partea fractionara'''
 def intreaga_egal_fractionara(n: float) -> bool:
     x = str(n).split('.')
-    if x[0] == x[1]:
+    if str(x[0]) == str(x[1]):
         return True
     return False
 
