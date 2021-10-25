@@ -91,8 +91,7 @@ def get_longest_equal_int_real(lst: list[float]) -> list[float]:
             subsecv_curenta = lst[i:j + 1]
             if len(subsecv_curenta) > lungime_max and lista_intreaga_egal_fractionara(subsecv_curenta):
                 lungime_max = len(subsecv_curenta)
-                subsecv_finala = subsecv_curenta
-    return subsecv_finala
+                subsecv_finala = str(subsecv_curenta)
 
 
 def test_get_longest_equal_int_real():
