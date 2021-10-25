@@ -18,7 +18,7 @@ def citireLista():
     givenString = input("Dati lista, cu elemente separate prin virgula")
     numberAsString = givenString.split(",")
     for x in numberAsString:
-        l.append(x)
+        l.append(float(x))
     return l
 
 
@@ -54,7 +54,7 @@ def get_longest_sorted_asc(lst: list[int]) -> list[int]:
 '''verifica daca partea intreaga a unui numar este egala cu partea fractionara'''
 def intreaga_egal_fractionara(n: float) -> bool:
     x = str(n).split('.')
-    if str(x[0]) == str(x[1]):
+    if x[0] == x[1]:
         return True
     return False
 
@@ -68,7 +68,7 @@ def test_intreaga_egal_fractionara():
 
 def lista_intreaga_egal_fractionara(lst: list[float]) -> bool:
     for x in lst:
-        if not intreaga_egal_fractionara(str(x)):
+        if not intreaga_egal_fractionara(x):
             return False
 
     return True
@@ -91,7 +91,7 @@ def get_longest_equal_int_real(lst: list[float]) -> list[float]:
             subsecv_curenta = lst[i:j + 1]
             if len(subsecv_curenta) > lungime_max and lista_intreaga_egal_fractionara(subsecv_curenta):
                 lungime_max = len(subsecv_curenta)
-                subsecv_finala = str(subsecv_curenta)
+                subsecv_finala = subsecv_curenta
 
     return subsecv_finala
 
