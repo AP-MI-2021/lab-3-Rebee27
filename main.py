@@ -23,8 +23,6 @@ def citireLista():
 
 
 '''verifica daca lista este sortata'''
-
-
 def sorted(lst: list[int]) -> bool:
     for i in range(1, len(lst)):
         if lst[i - 1] > lst[i]:
@@ -38,19 +36,19 @@ def test_sorted():
 
 
 '''returneaza cea mai lunga subsecventa sortata ascendent'''
-
-
 def get_longest_sorted_asc(lst: list[int]) -> list[int]:
     subsecv_finala = []
     lungime_max = 0
 
     for i in range(len(lst)):
         for j in range(i, len(lst)):
-            subsecv_curenta = lst[i:j + 1]
-            if len(subsecv_curenta) > lungime_max and sorted(lst):
+            subsecv_curenta = lst[i:j+1]
+            if len(subsecv_curenta) > lungime_max and sorted(subsecv_curenta):
                 lungime_max = len(subsecv_curenta)
                 subsecv_finala = subsecv_curenta
     return subsecv_finala
+
+
 
 
 '''verifica daca partea intreaga a unui numar este egala cu partea fractionara'''
@@ -146,6 +144,7 @@ def get_longest_all_primes(lst: list[int]) -> list[int]:
 def main():
     test_sorted()
     test_numere_prime()
+
     test_intreaga_egal_fractionara()
     test_lista_intreaga_egal_fractionara()
     test_get_longest_equal_int_real()
