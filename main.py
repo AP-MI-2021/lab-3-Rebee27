@@ -68,7 +68,7 @@ def test_intreaga_egal_fractionara():
 
 def lista_intreaga_egal_fractionara(lst: list[float]) -> bool:
     for x in lst:
-        if not intreaga_egal_fractionara(x):
+        if not intreaga_egal_fractionara(str(x)):
             return False
 
     return True
